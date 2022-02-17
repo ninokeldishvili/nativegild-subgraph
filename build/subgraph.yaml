@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: NativeGild
@@ -26,7 +26,7 @@ dataSources:
         - Ungild
       abis:
         - name: NativeGild
-          file: ./abis/NativeGild.json
+          file: NativeGild\abis\NativeGild.json
       eventHandlers:
         - event: AltURI(address,string)
           handler: handleAltURI
@@ -48,4 +48,4 @@ dataSources:
           handler: handleURI
         - event: Ungild(address,uint256,uint256)
           handler: handleUngild
-      file: ./src/mapping.ts
+      file: NativeGild\NativeGild.wasm
