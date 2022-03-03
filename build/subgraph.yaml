@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: Contract
@@ -25,7 +25,7 @@ dataSources:
         - Ungild
       abis:
         - name: Contract
-          file: ./abis/Contract.json
+          file: Contract\abis\Contract.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
@@ -45,4 +45,4 @@ dataSources:
           handler: handleURI
         - event: Ungild(address,uint256,uint256)
           handler: handleUngild
-      file: ./src/mapping.ts
+      file: Contract\Contract.wasm
